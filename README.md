@@ -135,3 +135,64 @@ In this example, we can see that we can redeclare `varVariable` with `var`, but 
 
 ---
 
+###### 4.  How does hoisting work in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+Hoisting in JavaScript is a mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. This means that regardless of where variables and functions are declared within their scope, they are treated as if they were declared at the top of the scope.
+
+Here's how hoisting works for variables and functions:
+
+#### 1. Variable Hoisting:
+
+- When variables are declared with `var`, they are hoisted to the top of their containing function scope or global scope.
+However, only the declaration is hoisted, not the initialization. This means that variables are initialized with `undefined` by default until their actual assignment is reached in the code.
+- Variables declared with `let` or `const` are also hoisted to the top of their containing block scope, but they are not initialized until their actual declaration is reached in the code. This is called the `temporal dead zone` and attempting to access these variables before their declaration results in a `ReferenceError`.
+
+Here's an example to illustrate variable hoisting:
+
+```javascript
+console.log(x); // undefined
+var x = 5;
+console.log(x); // 5
+// This is equivalent to:
+
+var x;
+console.log(x); // undefined
+x = 5;
+console.log(x); // 5
+
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 5;
+
+console.log(z); // ReferenceError: Cannot access 'z' before initialization
+    let z = 10;
+```
+
+#### 2. Function Hoisting:
+
+- Function declarations are completely hoisted, including both the declaration and the function definition.
+This means that we can call a function before it's declared in the code, and it will still work.
+
+Here's an example to illustrate function hoisting:
+
+```javascript
+foo(); // "Hello, I am foo!"
+
+function foo() {
+    console.log("Hello, I am foo!");
+}
+
+// This is equivalent to:
+
+function foo() {
+    console.log("Hello, I am foo!");
+}
+
+foo(); // "Hello, I am foo!"
+```
+
+It's important to understand hoisting in JavaScript to avoid unexpected behavior and to write more readable and maintainable code.
+</details>
+
+---
