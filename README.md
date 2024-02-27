@@ -26,12 +26,14 @@ JavaScript provides different data types to hold different types of values. Ther
 <details><summary><b>Answer</b></summary>
 In JavaScript, we can declare a variable using the var, let, or const keywords. Here's how we can use each of them:
 #### 1. Using `var`:
+  
 ```javascript
 var variableName;
 ```
 Variables declared with `var` have function scope or global scope, but not block scope. They can be re-declared and updated within their scope.
 
 #### 2. Using `let`:
+
 ```javascript
 let variableName;
 ```
