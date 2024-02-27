@@ -4,7 +4,7 @@
 
 <details><summary><b>Answer</b></summary>
 JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript:
-<br/>
+
 1. Primitive data type.
 - String.
 - Number.
