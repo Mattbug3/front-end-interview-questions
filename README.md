@@ -93,9 +93,9 @@ In this example, `varVariable` is accessible outside the block because it's decl
 
 #### 2. Reassignment:
 
-`var`: Variables declared with `var` **can be updated** and **reassigned** within their scope.
-`let`: Variables declared with let **can be updated** and **reassigned** within their scope, just like var.
-`const`: Variables declared with const **cannot be reassigned** after initialization. However, **if the variable holds a reference to an object, the properties of that object can be modified**.
+- `var`: Variables declared with `var` **can be updated** and **reassigned** within their scope.
+- `let`: Variables declared with let **can be updated** and **reassigned** within their scope, just like var.
+- `const`: Variables declared with const **cannot be reassigned** after initialization. However, **if the variable holds a reference to an object, the properties of that object can be modified**.
 
 ```javascript
 var varValue = 10;
@@ -110,9 +110,9 @@ In this example, we can see that `varValue` and `letValue` can be reassigned new
 
 #### 3. Redeclaration:
 
-`var`: Variables declared with `var` **can be redeclared** within the same scope without any error.
-`let`: Variables declared with `let` **cannot be redeclared** in the same scope. Attempting to do so will result in a **syntax error**.
-`const`: Like `let`, variables declared with `const` **cannot be redeclared** in the same scope. Attempting to do so will also result in a **syntax error**.
+- `var`: Variables declared with `var` **can be redeclared** within the same scope without any error.
+- `let`: Variables declared with `let` **cannot be redeclared** in the same scope. Attempting to do so will result in a **syntax error**.
+- `const`: Like `let`, variables declared with `const` **cannot be redeclared** in the same scope. Attempting to do so will also result in a **syntax error**.
 
 ```javascript
 var varVariable = 'I am var';
