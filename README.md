@@ -125,4 +125,13 @@ const constVariable = 'I am redeclared const'; // Error: Identifier 'constVariab
 ```
 
 In this example, we can see that we can redeclare `varVariable` with `var`, but attempting to redeclare `letVariable` or `constVariable` with `let` or `const`, respectively, results in errors because they have already been declared in the same scope.
+
+#### Here's a summary:
+
+- Use `var` for variables that need to have *function* or *global scope* and might *need to be redeclared*.
+- Use `let` for variables that have *block scope* and might *need to be reassigned, but not redeclared*.
+- Use `const` for variables that have *block scope* and *whose value should not change after initialization*.
 </details>
+
+---
+
