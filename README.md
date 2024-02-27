@@ -1,12 +1,10 @@
 # Interview Questions
 
-## JavaScript
-
 ###### 1. What are the different data types in JavaScript?
 
 <details><summary><b>Answer</b></summary>
 JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript:
-  
+<br/>
 1. Primitive data type.
 - String.
 - Number.
@@ -17,6 +15,6 @@ JavaScript provides different data types to hold different types of values. Ther
 - Symbol.
 
 2. Non-primitive (reference) data type.
--Array.
--Object.
+- Array.
+- Object.
 </details>
