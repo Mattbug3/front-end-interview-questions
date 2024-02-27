@@ -196,3 +196,40 @@ It's important to understand hoisting in JavaScript to avoid unexpected behavior
 </details>
 
 ---
+
+###### 5. What are closures in JavaScript and how are they work?
+
+<details><summary><b>Answer</b></summary>
+
+#### 1. Definition: 
+
+When an inner function is defined within an outer function, the inner function retains a reference to the variables in the outer function's scope, even after the outer function has completed execution. This combination of the inner function and the variables it has access to forms a `closure`.
+
+#### 2. How closures work:
+
+- ##### Access to Outer Scope Variables: 
+The inner function can access the variables, parameters, and functions of the outer function, as well as the global scope. This is possible because the inner function retains a reference to the variables in its lexical scope.
+
+- ##### Preservation of Scope: 
+`Closures` allow functions to maintain references to variables from their containing scopes, preventing those variables from being garbage-collected when the outer function finishes executing. This enables powerful patterns such as data encapsulation and private variables.
+
+Here's an example to illustrate closures:
+
+```javascript
+function outerFunction() {
+    let outerVariable = 'I am outer';
+
+    function innerFunction() {
+        console.log(outerVariable); // Accesses outerVariable from the outer function's scope
+    }
+
+    return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // Outputs: "I am outer"
+```
+In this example, `innerFunction` is defined within `outerFunction` and has access to `outerVariable`. Even after `outerFunction` has finished executing, the `closure` function (which is `innerFunction`) still has access to `outerVariable`, thanks to the `closure`. This allows `closure` to access and use `outerVariable` when it's invoked.
+</details>
+
+---
