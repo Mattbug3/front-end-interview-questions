@@ -166,7 +166,7 @@ console.log(y); // ReferenceError: Cannot access 'y' before initialization
 let y = 5;
 
 console.log(z); // ReferenceError: Cannot access 'z' before initialization
-    let z = 10;
+let z = 10;
 ```
 
 #### 2. Function Hoisting:
