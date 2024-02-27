@@ -24,6 +24,7 @@ JavaScript provides different data types to hold different types of values. Ther
 ###### 2. How do you delare a variable in JavaScript?
 
 <details><summary><b>Answer</b></summary>
+  
 In JavaScript, we can declare a variable using the `var`, `let`, or `const` keywords. Here's how we can use each of them:
   
 #### 1. Using `var`:
