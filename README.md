@@ -815,7 +815,7 @@ console.log(greet() === window); // true
 console.log(greet() === global); // false
 console.log(obj.sayName()); // "John"
 ```
-- In a function context (strict mode), the behavior is similar to the default function context.
+- In strict mode, if a function is called without any specific object context, the value of `this` inside that function will be `undefined`. However, if the function is called as a method of an object, the value of `this` will be determined by the object calling the function and won't be affected by strict mode
 
 Example:
 
@@ -825,15 +825,16 @@ function myFunction() {
   console.log(this); // undefined
 }
 
+
+"use strict";
 const obj = {
   name: 'John',
   sayName: function() {
-    "use strict";
     return this.name;
   }
 };
 
-console.log(obj.sayName()); // "John"
+console.log(obj.sayName()); // John
 
 ```
 
