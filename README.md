@@ -233,3 +233,64 @@ In this example, `innerFunction` is defined within `outerFunction` and has acces
 </details>
 
 ---
+
+###### 6. How do you use callbacks in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, a callback is a function that we pass as an argument to another function and execute after the completion of a particular task or event. Callbacks are commonly used in asynchronous operations, such as handling events, making API requests, or dealing with timeouts.
+
+For instance, let's say we want to fetch data from a server using an asynchronous HTTP request. We can define a callback function to handle the response data once it's available:
+
+```javascript
+function fetchData(url, callback) {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => callback(data))
+        .catch(error => console.error(error));
+}
+
+function processResponse(data) {
+    console.log(data);
+}
+
+fetchData('https://api.example.com/data', processResponse);
+```
+
+In this example, `fetchData` is a function that makes an asynchronous HTTP request to the specified URL. We pass a callback function (`processResponse`) as an argument. Once the data is fetched successfully, the `callback` function is invoked with the response data. This allows us to handle the response data in the `processResponse` function, which could involve rendering it on the UI or performing additional processing.
+
+Another example involves handling events in a web application. Suppose we want to add a click event listener to a button element and execute a callback function when the button is clicked:
+
+```javascript
+const button = document.getElementById('myButton');
+
+function handleClick() {
+    console.log('Button clicked');
+}
+
+button.addEventListener('click', handleClick);
+```
+In this case, the `handleClick` function is passed as a `callback`to the `addEventListener` method. When the `button` is `clicked`, the `handleClick` function is executed, logging `Button clicked` to the console.
+
+Here's another example showcasing the usage of callbacks for dealing with timeouts:
+
+```javascript
+function delayedMessage(message, delay, callback) {
+    setTimeout(() => {
+        console.log(message);
+        callback();
+    }, delay);
+}
+
+function afterDelay() {
+    console.log('Callback executed after delay');
+}
+
+// Call delayedMessage function with a message, delay of 2 seconds, and a callback
+delayedMessage('This message is delayed by 2 seconds', 2000, afterDelay);
+```
+In this example, we define a function called `delayedMessage` that takes three parameters: `message` (the message to be logged), `delay` (the delay time in milliseconds), and `callback` (the callback function to be executed after the delay). Inside `delayedMessage`, we use `setTimeout` to schedule the execution of a function after the specified delay. Once the delay is over, the provided `message` is logged to the console, and then the `callback` function is invoked.
+
+We also define a `callback` function called `afterDelay`, which simply logs a `message` indicating that it has been executed. Finally, we call the `delayedMessage` function with the `message` to be displayed after the `delay`, a `delay` of 2000 milliseconds (2 seconds), and the `afterDelay` function as the `callback`. This demonstrates how we can use `callbacks` to perform actions after a specified delay, such as `animations`, `notifications`, or other `asynchronous` tasks.
+</details>
+
+---
