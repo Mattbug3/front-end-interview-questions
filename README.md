@@ -645,7 +645,7 @@ Understanding and mastering these operators is crucial for writing efficient and
 
 ---
 
-###### 12. What is the difference between 'undefined' and 'null' in JavaScript?
+###### 13. What is the difference between 'undefined' and 'null' in JavaScript?
 <details><summary><b>Answer</b></summary>
 
 In JavaScript, `undefined` and `null` are both used to represent absence of value, but they have different meanings and use cases:
@@ -680,6 +680,89 @@ console.log(y); // Output: null
 ```
 
 In summary, `undefined` typically indicates that something has not been defined or provided, whereas `null` is used to explicitly denote absence of value or to clear the value of a variable.
+</details>
+
+---
+
+###### 14. How do you handle asynchronous code in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, we handle asynchronous code using various techniques, including `callbacks`, `promises`, and `async/await`. Here's a brief overview of each approach:
+
+#### 1. Callbacks:
+
+- Callbacks are functions passed as arguments to other functions and are invoked once the asynchronous operation completes.
+- They are commonly used in older JavaScript code to handle asynchronous operations.
+
+Example:
+
+```javascript
+function fetchData(url, callback) {
+    // Asynchronous operation, such as fetching data from a server
+    setTimeout(() => {
+        const data = 'Some data';
+        callback(data);
+    }, 1000);
+}
+
+function processResponse(data) {
+    console.log(data);
+}
+
+fetchData('https://api.example.com/data', processResponse);
+```
+
+#### 2.Promises:
+
+- Promises represent a value that may be available now, or in the future, or never.
+- They provide a cleaner way to handle asynchronous code compared to callbacks, especially for chaining multiple asynchronous operations.
+
+Example:
+
+```javascript
+function fetchData(url) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = 'Some data';
+            resolve(data);
+        }, 1000);
+    });
+}
+
+fetchData('https://api.example.com/data')
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+```
+
+#### 3. Async/Await:
+
+- Async/await is a modern approach to handle asynchronous code in JavaScript, introduced in ES2017.
+- It allows writing asynchronous code in a synchronous-like manner, making it easier to read and understand, especially for developers coming from synchronous programming backgrounds.
+
+Example:
+
+```javascript
+async function fetchData(url) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = 'Some data';
+            resolve(data);
+        }, 1000);
+    });
+}
+
+async function processData() {
+    try {
+        const data = await fetchData('https://api.example.com/data');
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+processData();
+```
+Each of these techniques has its own use cases and benefits, and the choice depends on the specific requirements of your project and personal preference.
 </details>
 
 ---
