@@ -398,3 +398,75 @@ This allows us to clean up resources or perform cleanup tasks that need to be do
 </details>
 
 ---
+
+###### 10. How do you create and manipulate objects in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, we create and manipulate objects using `object literals`, `constructor functions`, and `classes`. Here's how we do it:
+
+#### 1. Object Literals:
+
+```javascript
+// Creating an object using object literal
+const person = {
+    name: 'John',
+    age: 30,
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+};
+
+// Accessing properties and methods
+console.log(person.name); // Output: John
+person.greet(); // Output: Hello, my name is John and I am 30 years old.
+```
+#### 2. Constructor Functions:
+
+```javascript
+// Defining a constructor function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    // Adding a method to the prototype
+    this.greet = function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+};
+}
+
+
+// Creating objects using the constructor function
+const person1 = new Person('John', 30);
+const person2 = new Person('Alice', 25);
+
+// Accessing properties and methods
+console.log(person1.name); // Output: John
+person1.greet(); // Output: Hello, my name is John and I am 30 years old.
+
+```
+
+#### 3. Classes (ES6+):
+
+```javascript
+// Defining a class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+// Creating objects using the class
+const person1 = new Person('John', 30);
+const person2 = new Person('Alice', 25);
+
+// Accessing properties and methods
+console.log(person1.name); // Output: John
+person1.greet(); // Output: Hello, my name is John and I am 30 years old.
+```
+These are the common ways to create and manipulate objects in JavaScript. Depending on the scenario and personal preference, we can choose the approach that best suits our needs.
+</details>
+---
