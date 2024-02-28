@@ -294,3 +294,35 @@ We also define a `callback` function called `afterDelay`, which simply logs a `m
 </details>
 
 ---
+
+###### 7. What are promises in JavaScript??
+<details><summary><b>Answer</b></summary>
+In JavaScript, promises are objects representing the eventual completion or failure of an asynchronous operation. We use them to handle asynchronous operations such as fetching data from a server, reading files, or executing animations, where the result may not be available immediately.
+
+We can create a promise using the `Promise` constructor, passing a function with `resolve` and `reject` parameters. Inside this function, we perform an asynchronous operation, like using `setTimeout` to simulate a delay, and then resolve or reject the promise based on the result.
+
+```javascript
+// Creating a promise
+const myPromise = new Promise((resolve, reject) => {
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+        const randomNumber = Math.random();
+        if (randomNumber > 0.5) {
+            resolve(randomNumber); // Resolve the promise with a value
+        } else {
+            reject(new Error('Random number is too small')); // Reject the promise with an error
+        }
+    }, 1000);
+});
+
+// Handling the promise
+myPromise.then((result) => {
+    console.log('Promise fulfilled with result:', result);
+}).catch((error) => {
+    console.log('Promise rejected with error:', error.message);
+});
+```
+Here, we handle the `fulfilled` state (success) of the promise using the `then()` method and the `rejected` state (failure) using the `catch()` method. Promises provide a cleaner and more flexible way to work with asynchronous code compared to traditional callback-based approaches, allowing for better error handling and chaining of multiple asynchronous operations.
+</details>
+
+---
