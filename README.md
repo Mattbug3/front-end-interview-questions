@@ -361,3 +361,40 @@ Inside the function, we use `await` to pause the execution of the function until
 </details>
 
 ---
+
+###### 9. How do you handle errors in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, we handle errors using` try...catch` blocks and error objects. Here's how we do it:
+
+```javascript
+try {
+    // Code that might throw an error
+    throw new Error('An error occurred');
+} catch (error) {
+    // Code to handle the error
+    console.error('Error:', error.message);
+}
+```
+In this example:
+
+- We wrap the code that might throw an error inside a try block.
+- If an error occurs within the try block, it's caught by the catch block.
+- The error object contains information about the error, such as its message, name, and stack trace.
+- We can then handle the error appropriately, such as logging it or displaying a message to the user.
+
+Additionally, we can also use the `finally` block to execute code regardless of whether an error occurred or not:
+
+```javascript
+try {
+    // Code that might throw an error
+} catch (error) {
+    // Code to handle the error
+} finally {
+    // Code to execute regardless of errors
+}
+```
+This allows us to clean up resources or perform cleanup tasks that need to be done regardless of the outcome of the `try...catch` block.
+</details>
+
+---
