@@ -832,7 +832,7 @@ In event handlers, such as those attached with `addEventListener`, `this` refers
 
 Example:
 
-```javascript
+```html
 <button id="myButton">Click me</button>
 <script>
 document.getElementById('myButton').addEventListener('click', function() {
