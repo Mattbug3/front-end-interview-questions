@@ -984,3 +984,143 @@ Classes in JavaScript are syntactic sugar over the prototype-based inheritance m
 
 ---
 
+###### 17. How do you create a class in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+To create a class in JavaScript, we use the `class` keyword followed by the name of the class. Inside the class, we define properties and methods to describe the object's characteristics and behavior. Once the class is defined, we can create instances of it using the `new` keyword followed by the class name. These instances inherit the properties and methods defined in the class, allowing us to create multiple objects with similar functionalities.
+
+Example:
+
+```javascript
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+// Creating an instance of the Person class
+const person1 = new Person('Alice', 30);
+const person2 = new Person('Bob', 25);
+
+// Accessing properties and methods of the instances
+console.log(person1.name); // Outputs: Alice
+console.log(person2.age); // Outputs: 25
+person1.greet(); // Outputs: Hello, my name is Alice and I am 30 years old.
+person2.greet(); // Outputs: Hello, my name is Bob and I am 25 years old.
+```
+
+- We define a `Person` class using the `class` keyword.
+- The` constructor` method is a special method for creating and initializing instances of the class with the `new` keyword. It sets the initial properties of the object.
+- Additional methods can be defined within the class body, such as `greet`.
+- We create instances of the `Person` class using the `new` keyword, passing arguments to the constructor.
+- We can access properties and methods of the instances using dot notation.
+
+Classes in JavaScript are syntactic sugar over the prototype-based inheritance model that JavaScript traditionally used. Under the hood, JavaScript classes still utilize prototypes.
+</details>
+
+---
+
+###### 18. What are the differences between ES5 and ES6?
+<details><summary><b>Answer</b></summary>
+ES5 and ES6 refer to different versions of the ECMAScript standard, which is the specification that JavaScript follows. Here are some key differences between ES5 and ES6:
+
+#### 1. Syntax: 
+ES6 introduced several new syntax features, such as `arrow functions`, `template literals`, `let` and `const` for variable declarations, `enhanced object literals`, `destructuring assignments`, and `classes`.
+
+#### 2. Arrow Functions: 
+ES6 introduced `arrow functions`, which provide a more concise syntax for writing function expressions, especially for functions with implicit returns.
+
+#### 3. Block-Scoped Declarations: 
+In ES5, variables are function-scoped using `var`, while ES6 introduced `let` and `const`, which are block-scoped, meaning they are limited to the block (enclosed by curly braces) in which they are defined.
+
+#### 4. Classes: 
+ES6 introduced a more convenient syntax for defining classes and working with inheritance in JavaScript, making object-oriented programming in JavaScript more familiar to developers from other programming languages.
+
+#### 5. Promises: 
+While promises were introduced in ES5 with libraries like Q and Bluebird, ES6 standardized promises natively in JavaScript, making asynchronous programming more manageable.
+
+#### 6. Modules: 
+ES6 introduced a native module system, allowing JavaScript code to be organized into separate files and imported/exported as needed, improving code organization and reuse.
+
+Overall, ES6 introduced many new features and improvements over ES5, making JavaScript development more efficient, readable, and maintainable.
+</details>
+
+---
+
+###### 19. What are arrow functions in JavaScript?
+<details><summary><b>Answer</b></summary>
+Arrow functions are a concise way to write anonymous function expressions in JavaScript. They were introduced in ES6 (ECMAScript 2015) and provide a more compact syntax compared to traditional function expressions.
+
+Arrow functions have the following features:
+
+#### 1. Concise Syntax: 
+Arrow functions use a shorter syntax compared to traditional function expressions, making the code more readable and compact.
+
+#### 2. Implicit Return: 
+If the function body consists of a single expression, the curly braces and `return` keyword can be omitted, and the expression's result will be implicitly returned.
+
+#### 3. Lexical this Binding: 
+Arrow functions do not have their own `this` context; instead, they inherit the `this` value from the surrounding code when they are defined. This behavior is often desired when working with object methods or event handlers.
+
+Here are some examples of arrow functions:
+
+```javascript
+// Traditional function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function equivalent
+const add = (a, b) => a + b;
+
+// Arrow function with implicit return
+const greet = name => `Hello, ${name}!`;
+
+// Arrow function with no parameters
+const sayHello = () => console.log("Hello!");
+
+// Arrow function as a callback
+const numbers = [1, 2, 3];
+const squared = numbers.map(num => num * num);
+```
+
+Arrow functions are widely used in modern JavaScript codebases due to their brevity and clarity. However, it's essential to be mindful of their behavior, especially regarding `this` binding, when using them in more complex scenarios.
+</details>
+
+---
+
+###### 20. What is template literal in JavaScript?
+<details><summary><b>Answer</b></summary>
+Template literals, introduced in ES6 (ECMAScript 2015), are a way to create strings in JavaScript that allow for embedded expressions and multiline strings. They are enclosed by backticks (``) instead of single or double quotes.
+
+Template literals offer the following features:
+
+#### 1. Embedded Expressions: 
+Within template literals, we can embed expressions by using `${}` syntax. These expressions are evaluated and concatenated into the string.
+
+#### 2. Multiline Strings: 
+Template literals support multiline strings, meaning we can include line breaks directly within the string without using special characters like `\n`.
+
+Here's an example of using template literals:
+
+```javascript
+const name = "John";
+const age = 30;
+
+// Using template literal
+const message = `Hello, my name is ${name} and I am ${age} years old.`;
+
+console.log(message);
+```
+
+In this example, `${name}` and `${age}` are expressions that are evaluated and inserted into the string.
+
+Template literals provide a more concise and readable way to work with strings in JavaScript, especially when dealing with dynamic content or multiline text.
+</details>
+
+---
