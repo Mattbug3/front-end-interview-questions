@@ -880,3 +880,65 @@ console.log(greetBob()); // Output: "Hello, Bob!"
 </details>
 
 ---
+
+###### 16. What is difference between call, bind and apply methods in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, `call`, `bind`, and `apply` are methods used to manipulate the context (`this` keyword) of a function when it's invoked. Here's a breakdown of their differences:
+
+#### 1. call():
+
+- The `call` method is used to invoke a function with a specified this value and arguments provided individually.
+- Syntax: `function.call(thisArg, arg1, arg2, ...)`
+
+Example:
+
+```javascript
+function greet() {
+    console.log(`Hello, ${this.name}!`);
+}
+
+const person = { name: 'Alice' };
+
+greet.call(person); // Outputs: Hello, Alice!
+```
+
+#### 2. apply():
+
+- The `apply` method is similar to call, but it accepts arguments as an array.
+- Syntax: `function.apply(thisArg, [argsArray])`
+
+Example:
+
+```javascript
+function greet() {
+    console.log(`Hello, ${this.name}!`);
+}
+
+const person = { name: 'Bob' };
+
+greet.apply(person); // Outputs: Hello, Bob!
+```
+
+#### 3. bind():
+
+- The `bind` method returns a new function with a specified this value and initial arguments. It doesn't invoke the function immediately but allows we to call it later.
+- Syntax: `function.bind(thisArg, arg1, arg2, ...)`
+
+Example:
+
+```javascript
+function greet() {
+    console.log(`Hello, ${this.name}!`);
+}
+
+const person = { name: 'Charlie' };
+const greetPerson = greet.bind(person);
+
+greetPerson(); // Outputs: Hello, Charlie!
+```
+
+In summary, `call` and `apply` immediately invoke the function with a specified context and arguments, while `bind` returns a new function with the specified context and arguments preset, allowing for later invocation.
+</details>
+
+---
