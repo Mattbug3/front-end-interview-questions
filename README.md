@@ -469,4 +469,5 @@ person1.greet(); // Output: Hello, my name is John and I am 30 years old.
 ```
 These are the common ways to create and manipulate objects in JavaScript. Depending on the scenario and personal preference, we can choose the approach that best suits our needs.
 </details>
+
 ---
