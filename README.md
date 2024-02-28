@@ -942,3 +942,45 @@ In summary, `call` and `apply` immediately invoke the function with a specified 
 </details>
 
 ---
+
+###### 17. How do you create a class in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+To create a class in JavaScript, we use the `class` keyword followed by the name of the class. Inside the class, we define properties and methods to describe the object's characteristics and behavior. Once the class is defined, we can create instances of it using the `new` keyword followed by the class name. These instances inherit the properties and methods defined in the class, allowing us to create multiple objects with similar functionalities.
+
+Example:
+
+```javascript
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+// Creating an instance of the Person class
+const person1 = new Person('Alice', 30);
+const person2 = new Person('Bob', 25);
+
+// Accessing properties and methods of the instances
+console.log(person1.name); // Outputs: Alice
+console.log(person2.age); // Outputs: 25
+person1.greet(); // Outputs: Hello, my name is Alice and I am 30 years old.
+person2.greet(); // Outputs: Hello, my name is Bob and I am 25 years old.
+```
+
+- We define a `Person` class using the `class` keyword.
+- The` constructor` method is a special method for creating and initializing instances of the class with the `new` keyword. It sets the initial properties of the object.
+- Additional methods can be defined within the class body, such as `greet`.
+- We create instances of the `Person` class using the `new` keyword, passing arguments to the constructor.
+- We can access properties and methods of the instances using dot notation.
+
+Classes in JavaScript are syntactic sugar over the prototype-based inheritance model that JavaScript traditionally used. Under the hood, JavaScript classes still utilize prototypes.
+</details>
+
+---
+
