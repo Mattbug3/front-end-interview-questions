@@ -471,3 +471,23 @@ These are the common ways to create and manipulate objects in JavaScript. Depend
 </details>
 
 ---
+
+###### 11. What is the difference between '==' and '===' in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, `==` and `===` are comparison operators used to compare values. However, they have different behaviors:
+
+1. `==` (loose equality operator): It checks for equality of values after converting the operands to the same type. If the operands are of different types, JavaScript will attempt to convert them to a common type before making the comparison. For example:
+
+- `0 == '0'` evaluates to `true` because JavaScript converts the string '0' to a number before making the comparison.
+- `1 == true` evaluates to `true` because JavaScript treats true as 1 when making the comparison.
+
+2. `===` (strict equality operator): It checks for equality of values without performing any type conversion. Both the value and the type of the operands must be the same for the comparison to return true. For example:
+
+- `0 === '0'` evaluates to `false` because the types of the operands are different.
+- `1 === true` evaluates to `false` because the types of the operands are different.
+
+In general, it's considered a best practice to use `===` for comparisons in JavaScript because it avoids unexpected type conversions and leads to more predictable code behavior.
+</details>
+
+---
