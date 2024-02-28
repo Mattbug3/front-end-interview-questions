@@ -644,3 +644,42 @@ Understanding and mastering these operators is crucial for writing efficient and
 </details>
 
 ---
+
+###### 12. What is the difference between 'undefined' and 'null' in JavaScript?
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, `undefined` and `null` are both used to represent absence of value, but they have different meanings and use cases:
+
+#### 1. undefined:
+
+- undefined is a primitive value that is automatically assigned to variables that have not been initialized or to formal parameters for which no arguments have been provided.
+- It indicates that a variable has been declared but has not yet been assigned a value.
+- When we access a variable that has been declared but not initialized, it returns undefined.
+- It is also the default return value of functions that do not explicitly return anything.
+
+Example:
+
+```javascript
+let x;
+console.log(x); // Output: undefined
+
+function foo() {}
+console.log(foo()); // Output: undefined
+```
+
+#### 2. null:
+
+- null is a special value in JavaScript that represents the intentional absence of any object value. It is often used to explicitly indicate that a variable does not point to any object or that a property or variable is meant to be empty.
+- It is usually assigned to a variable as a programmer-defined value to indicate that it has no value.
+
+Example:
+
+```javascript
+let y = null;
+console.log(y); // Output: null
+```
+
+In summary, `undefined` typically indicates that something has not been defined or provided, whereas `null` is used to explicitly denote absence of value or to clear the value of a variable.
+</details>
+
+---
