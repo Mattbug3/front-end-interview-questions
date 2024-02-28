@@ -489,3 +489,158 @@ In general, it's considered a best practice to use `===` for comparisons in Java
 </details>
 
 ---
+
+###### 12. What are the different types of operators in JavaScript?
+<details><summary><b>Answer</b></summary>
+In JavaScript, operators are symbols used to perform operations on operands. They can be classified into several categories based on their functionality:
+
+#### 1. Arithmetic Operators: 
+These operators perform arithmetic operations on numeric operands.
+
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+- Modulus (%)
+- Increment (++)
+- Decrement (--)
+
+```javascript
+let a = 10;
+let b = 5;
+
+console.log(a + b); // Addition: 15
+console.log(a - b); // Subtraction: 5
+console.log(a * b); // Multiplication: 50
+console.log(a / b); // Division: 2
+console.log(a % b); // Modulus: 0
+console.log(++a);   // Increment: 11
+console.log(--b);   // Decrement: 4
+```
+#### 2. Assignment Operators: 
+These operators assign values to variables.
+
+- Assignment (=)
+- Addition assignment (+=)
+- Subtraction assignment (-=)
+- Multiplication assignment (*=)
+- Division assignment (/=)
+- Modulus assignment (%=)
+
+```javascript
+let x = 10;
+x += 5; // Same as x = x + 5
+console.log(x); // Output: 15
+
+let y = 20;
+y -= 5; // Same as y = y - 5
+console.log(y); // Output: 15
+
+// Similarly, *=, /=, and %= can be used.
+```
+
+#### 3. Comparison Operators: 
+These operators compare two values and return a Boolean result.
+
+- Equal to (==)
+- Not equal to (!=)
+- Strict equal to (===)
+- Strict not equal to (!==)
+- Greater than (>)
+- Less than (<)
+- Greater than or equal to (>=)
+- Less than or equal to (<=)
+
+```javascript
+let num1 = 10;
+let num2 = '10';
+
+console.log(num1 == num2); // Output: true
+console.log(num1 === num2); // Output: false
+console.log(num1 != num2); // Output: false
+console.log(num1 !== num2); // Output: true
+console.log(num1 > num2); // Output: false
+console.log(num1 < num2); // Output: false
+console.log(num1 >= num2); // Output: true
+console.log(num1 <= num2); // Output: true
+```
+
+#### 4. Logical Operators: 
+These operators perform logical operations on Boolean values.
+
+- Logical AND (&&)
+- Logical OR (||)
+- Logical NOT (!)
+
+```javascript
+let x = 10;
+let y = 20;
+
+console.log(x > 5 && y < 25); // Output: true
+console.log(x > 5 || y > 25); // Output: true
+console.log(!(x > 5)); // Output: false
+```
+
+#### 5. Bitwise Operators: 
+These operators perform bitwise operations on binary representations of numbers.
+
+- Bitwise AND (&)
+- Bitwise OR (|)
+- Bitwise XOR (^)
+- Bitwise NOT (~)
+- Left shift (<<)
+- Right shift (>>)
+- Zero-fill right shift (>>>)
+
+```javascript
+let a = 5; // 101
+let b = 3; // 011
+
+console.log(a & b); // Bitwise AND: 1
+console.log(a | b); // Bitwise OR: 7
+console.log(a ^ b); // Bitwise XOR: 6
+console.log(~a); // Bitwise NOT: -6
+console.log(a << 1); // Left shift: 10
+console.log(a >> 1); // Right shift: 2
+console.log(a >>> 1); // Zero-fill right shift: 2
+```
+
+#### 6. Unary Operators: 
+These operators act on a single operand.
+
+- Unary plus (+)
+- Unary minus (-)
+- Logical NOT (!)
+- Increment (++)
+- Decrement (--)
+- Typeof (typeof)
+- Void (void)
+- Delete (delete)
+
+```javascript
+let x = 10;
+console.log(+x); // Unary plus: 10
+console.log(-x); // Unary minus: -10
+console.log(!true); // Logical NOT: false
+console.log(++x); // Increment: 11
+console.log(--x); // Decrement: 9
+console.log(typeof x); // Typeof: number
+console.log(void 0); // Void: undefined
+delete x; // Delete
+```
+
+#### 7. Ternary Operator (Conditional Operator): 
+It's the only JavaScript operator that takes three operands and is used as a shortcut for an `if...else` statement.
+
+- Conditional (condition ? expr1 : expr2)
+
+```javascript
+let age = 20;
+let result = (age >= 18) ? "Adult" : "Minor";
+console.log(result); // Output: Adult
+```
+
+Understanding and mastering these operators is crucial for writing efficient and concise JavaScript code.
+</details>
+
+---
