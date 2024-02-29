@@ -1551,3 +1551,136 @@ Overall, understanding the difference between synchronous and asynchronous code 
 </details>
 
 ---
+
+###### 27. What are the different types of loops in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+In JavaScript, there are several types of loops commonly used for iterating over arrays, objects, or executing code repeatedly. The main types of loops are:
+
+#### 1. for loop: 
+Executes a block of code a specified number of times.
+
+Exmaple:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+```
+
+#### 2. while loop:
+
+Exmaple:
+
+```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+// Output: 0, 1, 2, 3, 4
+```
+
+#### 3. do...while loop:
+
+Exmaple:
+
+```javascript
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+// Output: 0, 1, 2, 3, 4
+```
+
+#### Note: While loop vs. do...while loop
+
+- While loop: Executes the code block as long as the condition is true. It checks the condition before executing the block.
+- Do...while loop: Similar to a while loop, but it always executes the block of code at least once before checking the condition. This ensures that the block of code is executed at least once, regardless of whether the condition is true or false.
+
+Example:
+
+```javascript
+let i = 0;
+
+// While loop
+while (i < 0) {
+  console.log('While loop:', i); 
+  // This code won't execute because the condition is false initially
+  i++;
+}
+
+// Do...while loop
+do {
+  console.log('Do...while loop:', i); 
+  // This code will execute at least once;
+  //Output:  Do...while loop:, 0
+  i++;
+} while (i < 0);
+```
+
+#### 4. for...in loop:
+
+Exmaple:
+
+```javascript
+const person = { name: 'John', age: 30 };
+for (let key in person) {
+  console.log(key, person[key]);
+}
+// Output: name John, age 30
+```
+
+#### 5. for...of loop:
+
+Exmaple:
+
+```javascript
+const numbers = [1, 2, 3];
+for (let num of numbers) {
+  console.log(num);
+}
+// Output: 1, 2, 3
+```
+
+#### Note: for...in loop vs. for...of loop
+
+1. for...in loop:
+- Usage: Typically used to iterate over the enumerable properties of an object.
+- Iterates over: Enumerables properties of an object, including inherited properties from the prototype chain.
+
+Example:
+
+```javascript
+/const obj = { a: 1, b: 2, c: 3 };
+
+for (const key in obj) {
+  console.log(key); // Outputs: 'a', 'b', 'c'
+  console.log(obj[key]); // Outputs: 1, 2, 3
+}
+```
+##### Note: It's not recommended to use `for...in` loop with arrays because it can also iterate over array prototype properties, and the iteration order may not be guaranteed.
+
+2. for...of loop
+- Usage: Used to iterate over iterable objects like arrays, strings, sets, maps, etc.
+- Iterates over: The values of an iterable object, not including prototype properties.
+
+Example:
+
+```javascript
+const arr = [1, 2, 3];
+
+for (const item of arr) {
+  console.log(item); // Outputs: 1, 2, 3
+}
+```
+##### Note: 
+- for...of loop cannot be used to iterate over plain objects (i.e., objects created with `{}`). It's specifically designed for iterable objects.
+- In summary, while both loops are used for iteration, `for...in` is more suitable for objects and `for...of` is preferred for iterating over the values of iterable objects like arrays and strings.
+
+Each type of loop has its use cases and advantages, so choosing the right one depends on the specific requirements of our code.
+</details>
+
+---
