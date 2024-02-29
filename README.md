@@ -1401,3 +1401,97 @@ By using these techniques, we can effectively work with regular expressions in J
 </details>
 
 ---
+
+###### 25. What are the different ways to create functions in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, there are several ways to create functions, each with its own syntax and use cases:
+
+#### 1. Function Declaration:
+
+Example:
+
+```javascript
+function greet() {
+    return 'Hello, world!';
+}
+greet() //Output: Hello, world!
+```
+
+#### 2. Function Expression:
+
+Example:
+
+```javascript
+const greet = function() {
+    return 'Hello, world!';
+};
+greet() //Output: Hello, world!
+```
+
+#### 3. Arrow Function (Introduced in ES6):
+
+Example:
+
+```javascript
+const greet = () => {
+    return 'Hello, world!';
+};
+greet() //Output: Hello, world!
+```
+
+#### 4. Function Constructor (Not recommended due to security and performance implications):
+
+Example:
+
+```javascript
+const greet = new Function('return "Hello, world!";');
+greet() //Output: Hello, world!
+```
+
+#### 5. Named Function Expression:
+
+Example:
+
+```javascript
+const greet = function sayHello() {
+    return 'Hello, world!';
+};
+greet() //Output: Hello, world!
+```
+
+#### 6. Immediately Invoked Function Expression (IIFE):
+
+Example:
+
+```javascript
+(function() {
+    console.log('Hello, world!');
+})(); //Output: Hello, world!
+```
+#### 7. Generator Function (Introduced in ES6):
+
+Example:
+
+```javascript
+function* generatorFunction() {
+  yield 'Hello';
+  yield ', ';
+  yield 'world';
+  yield '!';
+}
+
+const generator = generatorFunction();
+let result = '';
+
+for (const value of generator) {
+  result += value;
+}
+
+console.log(result); // Output: "Hello, world!"
+```
+Each of these methods has its own advantages and use cases. Function declarations and expressions are commonly used for defining reusable blocks of code. Arrow functions provide a more concise syntax, especially for short, one-liner functions. Function constructors and generator functions offer more advanced features but are less commonly used in everyday programming.
+</details>
+
+---
