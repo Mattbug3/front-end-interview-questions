@@ -1734,3 +1734,45 @@ In all cases, when the `break` statement is encountered, the loop immediately te
 </details>
 
 ---
+
+###### 29. How do you handle multiple asynchronous requets in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+To handle multiple asynchronous requests in JavaScript, we typically use techniques like Promises, async/await, or libraries like Axios or Fetch API.
+
+With Promises, we can make multiple asynchronous calls simultaneously and wait for all of them to finish using `Promise.all()` or `Promise.race()`.
+
+Example with `Promise.all()`:
+
+```javascript
+const promise1 = fetch('https://api.example.com/data1');
+const promise2 = fetch('https://api.example.com/data2');
+
+Promise.all([promise1, promise2])
+  .then(responses => {
+    // Handle responses
+  })
+  .catch(error => {
+    // Handle errors
+  });
+```
+
+With async/await, we can make our code look synchronous while dealing with asynchronous operations.
+
+```javascript
+async function getData() {
+  try {
+    const data1 = await fetch('https://api.example.com/data1');
+    const data2 = await fetch('https://api.example.com/data2');
+    // Handle data
+  } catch (error) {
+    // Handle errors
+  }
+}
+
+getData();
+```
+These methods allow us to manage multiple asynchronous requests effectively, ensuring proper handling of responses and errors.
+</details>
+
+---
