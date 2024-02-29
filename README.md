@@ -1848,7 +1848,7 @@ In the first part, `globalVar` is accessible both inside and outside the functio
 
 In JavaScript, events are actions or occurrences that happen in the system. Here are some common types of events:
 
-1. Mouse Events: These events are triggered by mouse actions.
+#### 1. Mouse Events: These events are triggered by mouse actions.
 - click: When the mouse is clicked.
 - mouseover: When the mouse moves over an element.
 - mouseout: When the mouse moves out of an element.
@@ -1856,25 +1856,25 @@ In JavaScript, events are actions or occurrences that happen in the system. Here
 - mousedown: When a mouse button is pressed down over an element.
 - mouseup: When a mouse button is released over an element.
 
-2.  Keyboard Events: These events are triggered by keyboard actions.
+#### 2.  Keyboard Events: These events are triggered by keyboard actions.
 - keydown: When a key is pressed down.
 - keyup: When a key is released.
 - keypress: When a key is pressed and released.
 
-3. Form Events: These events are related to form elements.
+#### 3. Form Events: These events are related to form elements.
 - submit: When a form is submitted.
 - change: When the value of an input element changes.
 - input: When the user inputs text into an input element.
 - focus: When an element receives focus.
 - blur: When an element loses focus.
 
-4. Document and Window Events: These events are related to the document and window.
+#### 4. Document and Window Events: These events are related to the document and window.
 - load: When a document or resource is loaded.
 - resize: When the window is resized.
 - scroll: When the document is scrolled.
 - unload: When a document or resource is unloaded.
 
-5. Touch Events: These events are triggered by touch interactions on touch-enabled devices.
+#### 5. Touch Events: These events are triggered by touch interactions on touch-enabled devices.
 - touchstart: When a touch point is placed on the touch surface.
 - touchend: When a touch point is removed from the touch surface.
 - touchmove: When a touch point is moved along the touch surface.
@@ -1886,11 +1886,3 @@ These are just a few examples of the many types of events available in JavaScrip
 
 ---
 
-###### 33. What are the different types of events in JavaScript?
-
-<details><summary><b>Answer</b></summary>
-
-
-</details>
-
----
