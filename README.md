@@ -1314,3 +1314,90 @@ By using these techniques, we can effectively handle date and time operations in
 </details>
 
 ---
+
+###### 24. How do you handle regular expressions in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+Handling regular expressions in JavaScript involves using the built-in `RegExp` object and its methods. Here's an overview of how we can work with regular expressions in JavaScript:
+
+#### 1. Creating Regular Expressions: 
+Regular expressions can be created using either the regular expression literal syntax `(/pattern/flags)` or the `RegExp` constructor function.
+
+Example:
+
+```javascript
+const regexLiteral = /pattern/flags;
+const regexConstructor = new RegExp('pattern', 'flags');
+```
+
+#### 2. Matching Patterns: 
+We can use regular expressions to match patterns within strings using methods like `test()` and `exec()`.
+
+Example:
+
+```javascript
+const str = 'Hello, world!';
+const regex = /world/;
+console.log(regex.test(str)); // Output: true
+console.log(regex.exec(str)); // Output: ['world', index: 7, input: 'Hello, world!', groups: undefined]
+```
+
+#### 3. Extracting Matches: 
+Regular expressions can be used to extract matched substrings from strings using methods like `match()` and `exec()`.
+
+Example:
+
+```javascript
+const str = 'The quick brown fox jumps over the lazy dog';
+const regex = /fox/;
+console.log(str.match(regex)); // Output: ['fox']
+```
+
+#### 4. Replacing Matches: 
+We can use regular expressions to replace matched substrings within strings using methods like `replace()`.
+Example:
+
+```javascript
+const str = 'Hello, world!';
+const regex = /world/;
+console.log(str.replace(regex, 'Universe')); // Output: 'Hello, Universe!'
+```
+
+#### 5. Splitting Strings: 
+Regular expressions can be used to split strings into arrays of substrings using the `split()` method.
+
+Example:
+
+```javascript
+const str = 'apple,banana,orange';
+const regex = /,/;
+console.log(str.split(regex)); // Output: ['apple', 'banana', 'orange']
+```
+
+#### 6. Flags: 
+Regular expressions support various flags such as `i` (ignore case), `g` (global search), `m` (multiline), and `s` (dotall).
+
+Example:
+
+```javascript
+const str = 'Hello, World!';
+const regex = /hello/i; // Ignore case
+console.log(regex.test(str)); // Output: true
+```
+
+#### 7. Character Classes and Quantifiers: 
+
+Regular expressions support character classes like `\d` (digit), `\w` (word character), and quantifiers like `+` (one or more), `*` (zero or more), `?` (zero or one).
+
+Example:
+
+```javascript
+const str = '123-456-7890';
+const regex = /\d{3}-\d{3}-\d{4}/;
+console.log(regex.test(str)); // Output: true
+```
+By using these techniques, we can effectively work with regular expressions in JavaScript for tasks such as pattern matching, validation, and text manipulation.
+</details>
+
+---
