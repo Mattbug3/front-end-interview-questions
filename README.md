@@ -1200,3 +1200,39 @@ function average(...args) {
 </details>
 
 ---
+
+###### 22. What is destructuring in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+Destructuring in JavaScript allows us to extract values from arrays or objects and assign them to variables in a concise and readable manner. It enables us to unpack values from arrays or properties from objects into distinct variables, making it easier to work with complex data structures.
+
+There are two main types of destructuring in JavaScript:
+
+#### 1. Array Destructuring:
+
+It involves unpacking array values into variables using a syntax similar to array literals.
+
+Example:
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbers;
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+```
+
+#### 2. Object Destructuring:
+
+It involves extracting values from object properties and assigning them to variables with matching names.
+
+```javascript
+const person = { name: 'John', age: 30, country: 'USA' };
+const { name, age } = person;
+console.log(name); // Output: John
+console.log(age); // Output: 30
+```
+Destructuring provides a more concise syntax for extracting values, especially when working with nested objects or arrays. It helps in writing cleaner and more readable code by reducing the need for repetitive syntax and assignments.
+</details>
+
+---
