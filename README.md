@@ -1496,6 +1496,14 @@ Each of these methods has its own advantages and use cases. Function declaration
 
 ---
 
+###### 26. What is the difference between synchronous and asynchronous code in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, synchronous code executes in sequence, blocking further execution until the current operation finishes. Asynchronous code, on the other hand, allows the program to continue executing while waiting for an operation to complete. This is achieved through mechanisms like callbacks, promises, and async/await.
+
+Here's a breakdown of the differences:
+
 #### 1. Synchronous Code:
 - Executes sequentially, one operation at a time.
 - Blocks further execution until the current operation is complete.
