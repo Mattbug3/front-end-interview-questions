@@ -1115,3 +1115,88 @@ Template literals provide a more concise and readable way to work with strings i
 </details>
 
 ---
+
+###### 21. What are rest and spread operators in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+In Javascript, both the spread operator and rest parameter have the same syntax which is three dots(…). Even though they have the same syntax they differ in functions.
+
+#### 1. Spread operator
+- The `spread operator` helps us expand an iterable such as an array where multiple arguments are needed.
+
+Example:
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+console.log(...numbers); // Output: 1 2 3 4 5
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const mergedArray = [...array1, ...array2];
+console.log(mergedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+
+const array1 = [10, 20, 30, 40, 50];
+const array2 = [...array1, 60];
+console.log(array2); // Output: [10, 20, 30, 40, 50, 60]
+```
+- The `spread operator` also helps us to merge, clone, or add properties to Objects.
+
+Example:
+
+```javascript
+
+//1. Merging Objects
+const defaults = { theme: 'light', fontSize: 14 };
+const userSettings = { username: 'john_doe', ...defaults };
+console.log(userSettings); 
+// Output: { username: 'john_doe', theme: 'light', fontSize: 14 }
+
+
+//2. Adding Properties to Objects:
+
+const person = { name: 'John', age: 30 };
+const updatedPerson = { ...person, country: 'USA' };
+console.log(updatedPerson); // Output: { name: 'John', age: 30, country: 'USA' }
+
+
+//3. Cloning Objects:
+const original = { a: 1, b: 2, c: 3 };
+const clone = { ...original };
+console.log(clone); // Output: { a: 1, b: 2, c: 3 }
+```
+
+#### 2. Rest operator
+
+The `rest parameter` is converse to the `spread operator`. while the `spread operator` expands elements of an iterable, the `rest operator` compresses them. It collects several elements.
+
+- Object Destructuring:
+
+Example:
+
+```javascript
+const person = { name: 'John', age: 30, country: 'USA', gender: 'Male' };
+const { name, ...details } = person;
+console.log(name); // Output: John
+console.log(details); // Output: { age: 30, country: 'USA', gender: 'Male' }
+```
+
+- Function Parameters:
+
+```javascript
+function average(...args) {
+        console.log(args);
+        const avg =
+            args.reduce(function (a, b) {
+                return a + b;
+           }, 0) / args.length;
+        return avg;
+    }
+    console.log("average of numbers is : "
+        + average(1, 2, 3, 4, 5)); // Output:  "average of numbers is : 3"
+    console.log("average of numbers is : " // Output:  "average of numbers is : 2"
+        + average(1, 2, 3));
+```
+</details>
+
+---
