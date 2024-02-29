@@ -1495,3 +1495,51 @@ Each of these methods has its own advantages and use cases. Function declaration
 </details>
 
 ---
+
+#### 1. Synchronous Code:
+- Executes sequentially, one operation at a time.
+- Blocks further execution until the current operation is complete.
+- Can lead to blocking behavior, especially with long-running tasks.
+- Commonly used for simple, linear tasks where the order of execution matters.
+
+Example:
+
+```javascript
+console.log('Start');
+console.log('Middle');
+console.log('End');
+
+//Output:
+//Start
+//Middle
+//End
+```
+
+#### 2. Asynchronous Code:
+- Executes non-sequentially, allowing other operations to run concurrently.
+- Does not block further execution, enabling better responsiveness.
+- Commonly used for I/O operations, network requests, and tasks with unpredictable timing.
+- Requires handling callbacks, promises, or async/await for managing asynchronous tasks.
+
+Example with Callbacks:
+
+```javascript
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Middle');
+}, 1000);
+
+console.log('End');
+
+//Output:
+//Start
+//End
+//Middle
+```
+In this example, "Start" is logged first, then "End", and finally "Middle" after a delay of 1 second. While waiting for the delay, other operations can continue executing, demonstrating the asynchronous nature of setTimeout.
+
+Overall, understanding the difference between synchronous and asynchronous code is crucial for building efficient and responsive JavaScript applications.
+</details>
+
+---
