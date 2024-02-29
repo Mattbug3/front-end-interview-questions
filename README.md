@@ -1776,3 +1776,121 @@ These methods allow us to manage multiple asynchronous requests effectively, ens
 </details>
 
 ---
+
+###### 30. How do you check if a variable is an array in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+To check if a variable is an array in JavaScript, we can use the `Array.isArray()` method. This method returns true if the provided value is an array, otherwise it returns false. 
+
+Here's an example:
+
+```javascript
+const array = [1, 2, 3];
+
+if (Array.isArray(array)) {
+  console.log('The variable is an array.');
+} else {
+  console.log('The variable is not an array.');
+}
+```
+
+This will output: "The variable is an array." if `array` is indeed an array. If `array` were not an array, it would output: "The variable is not an array."
+
+</details>
+
+---
+
+###### 31. What are the different types of scoopes in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, there are mainly two types of scopes:
+
+#### 1. Global Scope: 
+Variables declared outside of any function or block have global scope. They can be accessed from anywhere in the code.
+
+#### 2. Local Scope: 
+Variables declared within a function or block have local scope. They are accessible only within that function or block.
+
+Additionally, there is a concept called "lexical scope," which refers to the nested structure of functions in JavaScript. Inner functions have access to variables defined in outer functions due to lexical scoping rules.
+
+Example:
+
+```javascript
+// Global scope
+var globalVar = "I'm global";
+
+function globalFunction() {
+    console.log(globalVar); // Accessible
+}
+
+console.log(globalVar); // Accessible
+globalFunction();
+
+// Local scope
+function localFunction() {
+    var localVar = "I'm local";
+    console.log(localVar); // Accessible
+}
+
+localFunction();
+console.log(localVar); // Not accessible, throws ReferenceError
+```
+In the first part, `globalVar` is accessible both inside and outside the function `globalFunction()` because it's declared in the global scope. In the second part, `localVar` is only accessible inside the `localFunction()` because it's declared within the function's scope. Trying to access it outside the function will result in a ReferenceError since it's out of scope.
+</details>
+
+---
+
+###### 32. What are the different types of events in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, events are actions or occurrences that happen in the system. Here are some common types of events:
+
+1. Mouse Events: These events are triggered by mouse actions.
+- click: When the mouse is clicked.
+- mouseover: When the mouse moves over an element.
+- mouseout: When the mouse moves out of an element.
+- mousemove: When the mouse pointer is moved over an element.
+- mousedown: When a mouse button is pressed down over an element.
+- mouseup: When a mouse button is released over an element.
+
+2.  Keyboard Events: These events are triggered by keyboard actions.
+- keydown: When a key is pressed down.
+- keyup: When a key is released.
+- keypress: When a key is pressed and released.
+
+3. Form Events: These events are related to form elements.
+- submit: When a form is submitted.
+- change: When the value of an input element changes.
+- input: When the user inputs text into an input element.
+- focus: When an element receives focus.
+- blur: When an element loses focus.
+
+4. Document and Window Events: These events are related to the document and window.
+- load: When a document or resource is loaded.
+- resize: When the window is resized.
+- scroll: When the document is scrolled.
+- unload: When a document or resource is unloaded.
+
+5. Touch Events: These events are triggered by touch interactions on touch-enabled devices.
+- touchstart: When a touch point is placed on the touch surface.
+- touchend: When a touch point is removed from the touch surface.
+- touchmove: When a touch point is moved along the touch surface.
+- touchcancel: When a touch event is canceled.
+
+These are just a few examples of the many types of events available in JavaScript. Events play a crucial role in creating interactive and dynamic web applications.
+
+</details>
+
+---
+
+###### 33. What are the different types of events in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+
+</details>
+
+---
