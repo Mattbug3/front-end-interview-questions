@@ -1236,3 +1236,81 @@ Destructuring provides a more concise syntax for extracting values, especially w
 </details>
 
 ---
+
+###### 23. How do you handle date and time in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+
+In JavaScript, handling date and time involves using the built-in `Date` object and various methods associated with it. Here's an overview of how we can handle date and time in JavaScript:
+
+#### 1. Creating a Date Object: 
+We can create a new `Date` object to represent the current date and time or a specific date and time by passing relevant parameters such as year, month, day, hour, minute, second, and milliseconds.
+
+Example:
+
+```javascript
+
+```
+
+Example:
+
+```javascript
+const currentDate = new Date(); // Current date and time
+const specificDate = new Date(2024, 1, 29, 12, 30, 0); // Specific date and time
+```
+
+#### 2. Getting Date and Time Components:
+We can extract various components of a date and time such as the year, month, day, hour, minute, second, and milliseconds using the `get` methods of the `Date` object.
+
+Example:
+
+```javascript
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth(); // Month is zero-based (0 for January, 11 for December)
+const day = currentDate.getDate();
+const hours = currentDate.getHours();
+const minutes = currentDate.getMinutes();
+const seconds = currentDate.getSeconds();
+```
+
+#### 3. Formatting Dates: 
+We can format dates and times using various methods such as `toDateString()`, `toLocaleDateString()`, `toTimeString()`, and `toLocaleTimeString()` to get human-readable date and time strings.
+
+Example:
+
+```javascript
+const dateString = currentDate.toDateString(); // "Wed Feb 28 2024"
+const timeString = currentDate.toTimeString(); // "12:30:00 GMT+0530 (India Standard Time)"
+```
+
+#### 4. Parsing Dates: 
+JavaScript provides methods like `Date.parse()` and new `Date()` to parse date strings into `Date` objects.
+
+Example:
+
+```javascript
+const parsedDate = new Date('2024-02-29T12:30:00'); // Parsing ISO format string
+```
+
+#### 5. Manipulating Dates: 
+We can manipulate dates by adding or subtracting milliseconds, seconds, minutes, hours, days, months, or years from a `Date` object.
+
+Example:
+
+```javascript
+currentDate.setDate(currentDate.getDate() + 1); // Adding one day
+```
+
+#### 6. Comparing Dates: 
+Dates can be compared using comparison operators `(<, <=, >, >=)` or methods like `getTime()` to compare milliseconds since the Unix epoch.
+
+```javascript
+const futureDate = new Date(2025, 1, 1);
+if (currentDate.getTime() < futureDate.getTime()) {
+    console.log('Current date is before the future date.');
+}
+```
+By using these techniques, we can effectively handle date and time operations in JavaScript for various applications such as scheduling, event handling, and data analysis.
+</details>
+
+---
