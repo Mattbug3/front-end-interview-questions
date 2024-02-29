@@ -1654,7 +1654,7 @@ for (let num of numbers) {
 Example:
 
 ```javascript
-/const obj = { a: 1, b: 2, c: 3 };
+const obj = { a: 1, b: 2, c: 3 };
 
 for (const key in obj) {
   console.log(key); // Outputs: 'a', 'b', 'c'
@@ -1681,6 +1681,56 @@ for (const item of arr) {
 - In summary, while both loops are used for iteration, `for...in` is more suitable for objects and `for...of` is preferred for iterating over the values of iterable objects like arrays and strings.
 
 Each type of loop has its use cases and advantages, so choosing the right one depends on the specific requirements of our code.
+</details>
+
+---
+
+###### 28. How do you break out of a loop in JavaScript?
+
+<details><summary><b>Answer</b></summary>
+In JavaScript, we can break out of a loop using the `break` statement. The `break` statement is typically used within loops (such as `for`, `while`, or `do...while`) to immediately terminate the loop's execution when a certain condition is met.
+
+Here's an example of using `break` in a `for loop`:
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break; // Exit the loop when i is equal to 5
+  }
+  console.log(i); //Output: 0, 1, 2, 3, 4
+}
+```
+In this example, the loop will iterate from `0` to `4`. When `i` becomes `5`, the break statement is executed, causing the loop to terminate immediately.
+
+Similarly, we can use the `break` statement in a `while` or `do...while loop` to break out of the loop based on certain conditions.
+
+Here's an example of using `break` in a `while loop`:
+
+```javascript
+let i = 0;
+while (i < 10) {
+  if (i === 5) {
+    break; // Exit the loop when i is equal to 5
+  }
+  console.log(i); //Output: 0, 1, 2, 3, 4
+  i++;
+}
+```
+
+And here's an example using a `do...while loop`:
+
+```javascript
+let i = 0;
+do {
+  console.log(i); //Output: 0, 1, 2, 3, 4
+  i++;
+  if (i === 5) {
+    break; // Exit the loop when i is equal to 5
+  }
+} while (i < 10);
+```
+In all cases, when the `break` statement is encountered, the loop immediately terminates, and the program continues with the next statement after the loop.
+
 </details>
 
 ---
