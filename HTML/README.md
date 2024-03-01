@@ -88,7 +88,7 @@ HTML5 introduced the `Web Workers API`, enabling web applications to run scripts
 
 ---
 
-###### 5. What is the purpose of the <meta> tag?
+###### 5. What is the purpose of the `<meta>` tag?
 
 <details><summary><b>Answer</b></summary>
 
@@ -116,7 +116,7 @@ Example:
 
 ---
 
-###### 6. Explain the difference between <div> and <span>.
+###### 6. Explain the difference between `<div>` and `<span>`.
 
 <details><summary><b>Answer</b></summary>
 
@@ -144,16 +144,7 @@ Example:
 
 ---
 
-###### 8. What is the purpose of the <header> element?
-
-<details><summary><b>Answer</b></summary>
-
-The `<header>` element in HTML is used to define introductory or navigational content for its nearest ancestor `<article>`, `<aside>`, `<nav>`, or `<section>` element. It typically contains headings, logos, navigation menus, search bars, and other introductory content for a webpage or a section of a webpage.
-</details>
-
----
-
-###### 9. How do you embed an image in HTML?
+###### 8. How do you embed an image in HTML?
 
 <details><summary><b>Answer</b></summary>
 
@@ -162,13 +153,22 @@ To embed an image in HTML, we use the `<img>` tag, which is a self-closing tag. 
 Example:
 
 ```html
-<img src = './example.jpeg' alt="example image"/></a>
+<img src = './example.jpeg' alt="example image"/>
 ```
 </details>
 
 ---
 
-###### 10. Explain the purpose of the <footer> element in HTML.
+###### 9. What is the purpose of the `<header>` element?
+
+<details><summary><b>Answer</b></summary>
+
+The `<header>` element in HTML is used to define introductory or navigational content for its nearest ancestor `<article>`, `<aside>`, `<nav>`, or `<section>` element. It typically contains headings, logos, navigation menus, search bars, and other introductory content for a webpage or a section of a webpage.
+</details>
+
+---
+
+###### 10. Explain the purpose of the `<footer>` element in HTML.
 
 <details><summary><b>Answer</b></summary>
 
