@@ -266,3 +266,37 @@ We can use the `<a></a>`(anchor) tag with attribute `target = '_blank'` to creat
 </details>
 
 ---
+
+###### 21. What is the purpose of the `<time>` element in HTML?
+
+<details><summary><b>Answer</b></summary>
+
+The `<time>` element in HTML is used to represent dates, times, and durations in a machine-readable format.
+
+Example:
+
+```html
+<p>My birthday is <time datetime="2000-05-15">May 15, 2000</time>.</p>
+```
+In this example, the `<time>` element is used to indicate the date "May 15, 2000". The datetime attribute provides a machine-readable version of the date, which can be useful for accessibility and SEO purposes.
+</details>
+
+---
+
+###### 22. How do you embed a video in HTML? 
+
+<details><summary><b>Answer</b></summary>
+
+We can use the `<video>` tag to embed a video in HTML.
+</details>
+
+---
+
+###### 23. What is the purpose of the `<main>` element in HTML?
+
+<details><summary><b>Answer</b></summary>
+
+`<main>` represents the main content of a document, including `headers`, `footers`, and `sidebars`.
+</details>
+
+---
