@@ -198,7 +198,8 @@ Using `<ol></ol>`(ordered list) tag with `<li></li>`(list item) for each item
 ###### 13. How can you add comments in HTML?
 
 <details><summary><b>Answer</b></summary>
-Using <!-- Comment text here --> to add comments in HTML.
+
+Using `<!-- Comment text here -->` to add comments in HTML.
 </details>
 
 ---
@@ -215,6 +216,7 @@ The `<article>` tag in HTML is used to define independent, self-contained conten
 ###### 15. How do you create a line break in HTML?
 
 <details><summary><b>Answer</b></summary>
+
 We can use `<br>` tag to create a line break in HTML.
 </details>
 
@@ -232,7 +234,7 @@ The `<section>` tag in HTML is used to group related content together within a d
 ###### 17. Explain the concept of HTML entities.
 
 <details><summary><b>Answer</b></summary>
-HTML entities are special characters represented by code, such as &lt; for `<` and &nbsp; for a non-breaking space.
+HTML entities are special characters represented by code, such as `&lt;` for `<` and `&nbsp;` for a non-breaking space.
 </details>
 
 ---
@@ -240,6 +242,7 @@ HTML entities are special characters represented by code, such as &lt; for `<` a
 ###### 18. How do you create a table in HTML?
 
 <details><summary><b>Answer</b></summary>
+
 We can create a table using the `<table>` tag with `<tr> for table rows, `<td>` for table cells, and `<th>` for header cells.
 </details>
 
@@ -257,6 +260,7 @@ The `<aside>` element in HTML is used for content that is related but not centra
 ###### 20. How do you create an external link that opens in a new tab?
 
 <details><summary><b>Answer</b></summary>
+
 We can use the `<a></a>`(anchor) tag with attribute `target = '_blank'` to create an external link that opens in a new tab.
 </details>
 
