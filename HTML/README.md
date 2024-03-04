@@ -176,3 +176,88 @@ The `<footer>` element in HTML is used to define the footer of a document or a s
 </details>
 
 ---
+
+###### 11. What is the role of `nav` element in HTML?
+
+<details><summary><b>Answer</b></summary>
+
+The `<nav>` element in HTML represents a navigation menu, typically containing links to other pages or sections within the website.
+</details>
+
+---
+
+###### 12. How do you create an ordered list in HTML?
+
+<details><summary><b>Answer</b></summary>
+
+Using `<ol></ol>`(ordered list) tag with `<li></li>`(list item) for each item
+</details>
+
+---
+
+###### 13. How can you add comments in HTML?
+
+<details><summary><b>Answer</b></summary>
+Using <!-- Comment text here --> to add comments in HTML.
+</details>
+
+---
+
+###### 14. What is the purpose of the HTML `<article>` tag?
+
+<details><summary><b>Answer</b></summary>
+
+The `<article>` tag in HTML is used to define independent, self-contained content within a document. It's typically used for content that can stand alone and be syndicated, such as blog posts, news articles, forum posts, or comments.
+</details>
+
+---
+
+###### 15. How do you create a line break in HTML?
+
+<details><summary><b>Answer</b></summary>
+We can use `<br>` tag to create a line break in HTML.
+</details>
+
+---
+
+###### 16. What is the purpose of the HTML `<section>` tag?
+
+<details><summary><b>Answer</b></summary>
+
+The `<section>` tag in HTML is used to group related content together within a document. It helps to organize the content into distinct sections, making it easier to understand the structure of the webpage and improving accessibility.
+</details>
+
+---
+
+###### 17. Explain the concept of HTML entities.
+
+<details><summary><b>Answer</b></summary>
+HTML entities are special characters represented by code, such as &lt; for `<` and &nbsp; for a non-breaking space.
+</details>
+
+---
+
+###### 18. How do you create a table in HTML?
+
+<details><summary><b>Answer</b></summary>
+We can create a table using the `<table>` tag with `<tr> for table rows, `<td>` for table cells, and `<th>` for header cells.
+</details>
+
+---
+
+###### 19. What is the purpose of HTML `<aside>` element?
+
+<details><summary><b>Answer</b></summary>
+
+The `<aside>` element in HTML is used for content that is related but not central to the main content of a webpage, such as sidebars, pull quotes, or related links.
+</details>
+
+---
+
+###### 20. How do you create an external link that opens in a new tab?
+
+<details><summary><b>Answer</b></summary>
+We can use the `<a></a>`(anchor) tag with attribute `target = '_blank'` to create an external link that opens in a new tab.
+</details>
+
+---
