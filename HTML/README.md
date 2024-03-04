@@ -234,7 +234,8 @@ The `<section>` tag in HTML is used to group related content together within a d
 ###### 17. Explain the concept of HTML entities.
 
 <details><summary><b>Answer</b></summary>
-HTML entities are special characters represented by code, such as '&lt;' for `<` and '&nbsp;' for a non-breaking space.
+    
+HTML entities are special characters represented by code, such as '&amp;lt;' for '&lt;' and '&amp;nbsp;' for a non-breaking space.
 </details>
 
 ---
